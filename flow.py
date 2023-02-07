@@ -44,8 +44,8 @@ class Flow(ABC):
 @dataclass
 class IOUFlow(Flow):
 
-  _ground_truth_df: pd.DataFrame = None
-  _annotated_df: pd.DataFrame = None
+  _ground_truth_df: pd.DataFrame = pd.DataFrame()
+  _annotated_df: pd.DataFrame = pd.DataFrame()
   _iou_scores: List[float] = field(default_factory=list)
 
   def load_csv(self) -> None:
@@ -85,11 +85,11 @@ class IOUFlow(Flow):
     return df[df[column_name] == column_value]
   
   @staticmethod
-  def _get_df_column(df: pd.DataFrame, column_name:str) -> pd.DataFrame:
+  def _get_df_column(df: pd.DataFrame, column_name:str) -> pd.Series:
     return df[column_name]
   
   @staticmethod
-  def _get_first_row(df: pd.DataFrame):
+  def _get_first_row(df: pd.Series):
     return df.iloc[0]
   
   @staticmethod
