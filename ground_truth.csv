@@ -1,0 +1,5 @@
+image_id,label_id,label_class,coordinates
+image1,label1,vehicle,"{'x_1': 1, 'y_1': 1, 'x_2': 3, 'y_2': 3}"
+image1,label2,pedestrian,"{'x_1': 9, 'y_1': 1, 'x_2': 11, 'y_2': 3}"
+image1,label3,vechicle,"{'x_1': 9, 'y_1': 9, 'x_2': 11, 'y_2': 11}"
+image1,label4,traffic-light,"{'x_1': 1, 'y_1': 9, 'x_2': 3, 'y_2': 11}"
